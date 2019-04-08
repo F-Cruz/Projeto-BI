@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<architect-project version="1.0" appversion="1.0.8">
+ <project-name>Multidimencional</project-name>
+ <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
+ <project-data-sources>
+  <data-source id="DS0">
+   <property key="Logical" value="Modelo de Dados" />
+  </data-source>
+  <data-source id="DS2">
+   <property key="Connection Type" value="PostgreSQL" />
+   <property key="Logical" value="dw" />
+   <property key="JDBC URL" value="jdbc:postgresql://localhost:5432/dw" />
+   <property key="UID" value="postgres" />
+   <property key="PWD" value="postgres" />
+   <property key="ca.sqlpower.architect.etl.kettle.database" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.port" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.hostname" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.login" value="" />
+   <property key="ca.sqlpower.architect.etl.kettle.repos.password" value="" />
+  </data-source>
+ </project-data-sources>
+ <source-databases>
+  <database id="DB0" populated="true" UUID="36b54035-615d-42bc-89fd-52dcd94d4cc7" dbcs-ref="DS2" name="dw" physicalName="dw" >
+   <catalog id="CAT1" populated="true" UUID="cbd1dd4d-a79b-467e-bfea-18a05a766f3e" name="dw" nativeTerm="database" physicalName="dw" >
+    <schema id="SCH2" populated="false" UUID="68f2a4cd-e672-4d03-9aa4-c218da4e967b" name="information_schema" nativeTerm="schema" physicalName="information_schema" >
+    </schema>
+    <schema id="SCH3" populated="false" UUID="525c963e-ccdb-4417-9713-b80ab5c6f89e" name="pg_catalog" nativeTerm="schema" physicalName="pg_catalog" >
+    </schema>
+    <schema id="SCH4" populated="false" UUID="6e05b6dc-e0e1-48a0-ba86-4a184b4aa6c1" name="pg_toast_temp_1" nativeTerm="schema" physicalName="pg_toast_temp_1" >
+    </schema>
+    <schema id="SCH5" populated="false" UUID="0bab4767-60d7-4576-ac71-4b5e40b9f37b" name="public" nativeTerm="schema" physicalName="public" >
+    </schema>
+   </catalog>
+   <relationships>
+   </relationships>
+  </database>
+ </source-databases>
+ <target-database id="ppdb" dbcs-ref="DS0">
+  <table id="TAB7" populated="true" UUID="c873e912-9acb-41c4-9b91-c6214812cdc3" name="dimTipoRoubo" objectType="TABLE" physicalName="dimTipoRoubo" >
+   <remarks></remarks>
+   <folder id="FOLTAB71" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL8" populated="true" UUID="54500e5d-3bd7-4064-adde-30abcf12a9fb" autoIncrement="true" autoIncrementSequenceName="dimTipoRoubo_sk_troubo_seq" defaultValue="" name="sk_troubo" nullable="0" physicalName="sk_troubo" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL9" populated="true" UUID="397c1845-cc69-4042-b60c-c8cb17c53ed0" autoIncrement="false" autoIncrementSequenceName="dimTipoRoubo_nk_troubo_seq" defaultValue="" name="nk_troubo" nullable="0" physicalName="nk_troubo" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL10" populated="true" UUID="a540e48a-84f9-4ff7-be4b-52bd297a2f34" autoIncrement="false" autoIncrementSequenceName="dimTipoRoubo_total_roubo_seq" defaultValue="" name="total_roubo" nullable="0" physicalName="total_roubo" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL11" populated="true" UUID="bcddc001-e1c5-45ef-98df-54eff11373bb" autoIncrement="false" autoIncrementSequenceName="dimTipoRoubo_roubo_comercio_seq" defaultValue="" name="roubo_comercio" nullable="1" physicalName="roubo_comercio" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL12" populated="true" UUID="b7209dbf-55d7-4f83-96be-61a7fc2e3fa7" autoIncrement="false" autoIncrementSequenceName="dimTipoRoubo_roubo_residencia_seq" defaultValue="" name="roubo_residencia" nullable="0" physicalName="roubo_residencia" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL13" populated="true" UUID="8f5c0e29-10fb-4f2c-ae96-a098ea3bfbef" autoIncrement="false" autoIncrementSequenceName="dimTipoRoubo_roubo_veiculo_seq" defaultValue="" name="roubo_veiculo" nullable="0" physicalName="roubo_veiculo" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL14" populated="true" UUID="fbfb2b1b-2813-40a6-b689-50ea267f3532" autoIncrement="false" autoIncrementSequenceName="dimTipoRoubo_roubo_carga_seq" defaultValue="" name="roubo_carga" nullable="0" physicalName="roubo_carga" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL15" populated="true" UUID="4b03138c-04da-4fed-b685-d720ae0ef7e4" autoIncrement="false" autoIncrementSequenceName="dimTipoRoubo_roubo_transeunte_seq" defaultValue="" name="roubo_transeunte" nullable="0" physicalName="roubo_transeunte" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL16" populated="true" UUID="5a8d26a4-390d-41dc-882f-ef90f428d03d" autoIncrement="false" autoIncrementSequenceName="dimTipoRoubo_roubo_celular_seq" defaultValue="" name="roubo_celular" nullable="0" physicalName="roubo_celular" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB73" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB72" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB74" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX17" populated="true" UUID="aa959bd4-2908-4a01-97a6-c3e239819f72" clustered="false" name="sk_troubo" physicalName="sk_troubo" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC18" populated="true" UUID="3e23c25d-99ab-4f0c-8b3c-50bca0c8b1e5" ascendingOrDescending="UNSPECIFIED" column-ref="COL8" name="sk_troubo" physicalName="sk_troubo" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB19" populated="true" UUID="93294b50-e699-4a08-aff7-1e9e71f6e957" name="dimLocalizacao" objectType="TABLE" physicalName="dimLocalizacao" >
+   <remarks></remarks>
+   <folder id="FOLTAB191" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL20" populated="true" UUID="b081b186-1eee-45c0-a7e8-1f6c83ad377c" autoIncrement="true" autoIncrementSequenceName="dimLocalizacao_sk_loc_seq" defaultValue="" name="sk_loc" nullable="0" physicalName="sk_loc" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL21" populated="true" UUID="8ea158b5-8750-4d2e-9a46-ba6522702e1c" autoIncrement="false" autoIncrementSequenceName="dimLocalizacao_nk_loc_seq" defaultValue="" name="nk_loc" nullable="0" physicalName="nk_loc" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL22" populated="true" UUID="ed3c0bdb-0e29-4ef0-ab04-bcdb3aafbbf8" autoIncrement="false" autoIncrementSequenceName="dimLocalizacao_municipio_seq" defaultValue="" name="municipio" nullable="0" physicalName="municipio" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    <column id="COL23" populated="true" UUID="e3a551ac-306d-4bfc-8079-95826aee31e4" autoIncrement="false" autoIncrementSequenceName="dimLocalizacao_regiao_seq" defaultValue="" name="regiao" nullable="0" physicalName="regiao" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB193" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB192" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB194" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX24" populated="true" UUID="a617f61d-e75a-47f8-8300-a06fd756bbae" clustered="false" name="sk_loc" physicalName="sk_loc" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC25" populated="true" UUID="8202698a-5674-4e26-b524-736ef33ad9ae" ascendingOrDescending="UNSPECIFIED" column-ref="COL20" name="sk_loc" physicalName="sk_loc" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB26" populated="true" UUID="8759fa97-c944-4646-91f6-a971505e897e" name="dimTempo" objectType="TABLE" physicalName="dimTempo" >
+   <remarks></remarks>
+   <folder id="FOLTAB261" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL27" populated="true" UUID="c0c1d968-334c-483d-9a62-46764e78df1d" autoIncrement="true" autoIncrementSequenceName="dimTempo_sk_tempo_seq" defaultValue="" name="sk_tempo" nullable="0" physicalName="sk_tempo" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL28" populated="true" UUID="e804367f-bb28-4505-96e1-dc55644a1788" autoIncrement="false" autoIncrementSequenceName="dimTempo_nk_tempo_seq" defaultValue="" name="nk_tempo" nullable="0" physicalName="nk_tempo" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL29" populated="true" UUID="ea4341f9-4eaa-4b67-a6e6-b5d4e9268dc2" autoIncrement="false" autoIncrementSequenceName="dimTempo_mes_seq" defaultValue="" name="mes" nullable="0" physicalName="mes" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks></remarks>
+    </column>
+    <column id="COL30" populated="true" UUID="e50b4e51-3209-4fcb-a15b-e851dc455fb2" autoIncrement="false" autoIncrementSequenceName="dimTempo_ano_seq" defaultValue="" name="ano" nullable="0" physicalName="ano" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB263" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB262" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB264" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX31" populated="true" UUID="82361d03-e016-46a2-af28-415105032be0" clustered="false" name="sk_tempo" physicalName="sk_tempo" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC32" populated="true" UUID="24c43e93-e055-445f-8e2f-0d1761b832cc" ascendingOrDescending="UNSPECIFIED" column-ref="COL27" name="sk_tempo" physicalName="sk_tempo" />
+    </index>
+   </folder>
+  </table>
+  <table id="TAB33" populated="true" UUID="b6fedfc7-c64e-40bd-8797-663000fc5087" name="fatoRoubo" objectType="TABLE" physicalName="fatoRoubo" >
+   <remarks></remarks>
+   <folder id="FOLTAB331" populated="true" name="Columns" physicalName="Columns" type="1">
+    <column id="COL34" populated="true" UUID="19c679ed-8487-4506-9100-25278cfb3847" autoIncrement="false" autoIncrementSequenceName="dimTempo_sk_tempo_seq" defaultValue="" name="sk_tempo" nullable="0" physicalName="sk_tempo" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL35" populated="true" UUID="35047c11-2536-4e6a-89f9-dcb58f35dd9f" autoIncrement="false" autoIncrementSequenceName="dimLocalizacao_sk_loc_seq" defaultValue="" name="sk_loc" nullable="0" physicalName="sk_loc" precision="0" primaryKeySeq="1" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL36" populated="true" UUID="e90555be-3e6d-4141-9517-7c7cfda5953a" autoIncrement="false" autoIncrementSequenceName="dimTipoRoubo_sk_troubo_seq" defaultValue="" name="sk_troubo" nullable="0" physicalName="sk_troubo" precision="0" primaryKeySeq="2" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    <column id="COL37" populated="true" UUID="1eec9e64-66a5-4074-ae5d-383b4085c62a" autoIncrement="false" autoIncrementSequenceName="fatoRoubo_qtdRoubo_seq" defaultValue="" name="qtdRoubo" nullable="0" physicalName="qtdRoubo" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+     <remarks></remarks>
+    </column>
+    </folder>
+    <folder id="FOLTAB333" populated="true" name="Exported Keys" physicalName="Exported Keys" type="3">
+    </folder>
+    <folder id="FOLTAB332" populated="true" name="Imported Keys" physicalName="Imported Keys" type="2">
+    </folder>
+    <folder id="FOLTAB334" populated="true" name="Indices" physicalName="Indices" type="4">
+    <index id="IDX38" populated="true" UUID="cfda1a4f-f3f8-4f6b-bd20-09d88c10e170" clustered="false" name="sk_fatoRoubo" physicalName="sk_fatoRoubo" primaryKeyIndex="true" unique="false" >
+     <index-column id="IDC39" populated="true" UUID="4eae8bfe-3764-4932-90cd-479c74e794ab" ascendingOrDescending="UNSPECIFIED" column-ref="COL34" name="sk_tempo" physicalName="sk_tempo" />
+     <index-column id="IDC40" populated="true" UUID="c86b3e94-93ff-41fc-9cb6-eb7d4b7f874d" ascendingOrDescending="UNSPECIFIED" column-ref="COL35" name="sk_loc" physicalName="sk_loc" />
+     <index-column id="IDC41" populated="true" UUID="616a1bbe-885f-4a99-94c5-7f4d07346cb6" ascendingOrDescending="UNSPECIFIED" column-ref="COL36" name="sk_troubo" physicalName="sk_troubo" />
+    </index>
+   </folder>
+  </table>
+  <relationships>
+   <relationship id="REL42" populated="true" UUID="e01a8064-5fe7-4861-8f42-80fcb9dc921c" deferrability="7" deleteRule="3" fk-table-ref="TAB33" fkCardinality="7" identifying="true" name="dimTipoRoubo_fatoRoubo_fk" physicalName="dimTipoRoubo_fatoRoubo_fk" pk-table-ref="TAB7" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP43" populated="true" UUID="9339a3b6-6c95-4e1b-9651-bbb9993b7286" fk-column-ref="COL36" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL8" />
+   </relationship>
+   <relationship id="REL44" populated="true" UUID="bfdaa455-8e15-4f47-b3bc-5daf3d3d25f9" deferrability="7" deleteRule="3" fk-table-ref="TAB33" fkCardinality="7" identifying="true" name="dimLocalizacao_fatoRoubo_fk" physicalName="dimLocalizacao_fatoRoubo_fk" pk-table-ref="TAB19" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP45" populated="true" UUID="dc22a076-f45f-4efa-a418-28cf2d33b00b" fk-column-ref="COL35" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL20" />
+   </relationship>
+   <relationship id="REL46" populated="true" UUID="5a09417f-a4ee-49cd-9157-048e10000642" deferrability="7" deleteRule="3" fk-table-ref="TAB33" fkCardinality="7" identifying="true" name="dimTempo_fatoRoubo_fk" physicalName="dimTempo_fatoRoubo_fk" pk-table-ref="TAB26" pkCardinality="2" updateRule="3" >
+    <column-mapping id="CMP47" populated="true" UUID="13ef1b60-7c30-4ff1-8091-f43dfb9f846d" fk-column-ref="COL34" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL27" />
+   </relationship>
+  </relationships>
+ </target-database>
+ <ddl-generator type="ca.sqlpower.architect.ddl.GenericDDLGenerator" allow-connection="true"> </ddl-generator>
+ <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
+ <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
+ <play-pen zoom="1.0" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
+  <table-pane table-ref="TAB7" x="57" y="74" bgColor="0xbfd6ff" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB19" x="670" y="126" bgColor="0xf6bcbc" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB26" x="366" y="310" bgColor="0xfbdabb" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-pane table-ref="TAB33" x="378" y="110" bgColor="0xeeeeee" fgColor="0x000000" rounded="false" dashed="false"/>
+  <table-link relationship-ref="REL46" pkConnection="0.5502645502645502" fkConnection="0.4717948717948718" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="72"/>
+  <table-link relationship-ref="REL44" pkConnection="0.4235294117647059" fkConnection="0.6140350877192983" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="18"/>
+  <table-link relationship-ref="REL42" pkConnection="0.4967741935483871" fkConnection="0.49295774647887325" rLineColor="0x000000" pkLabelText="" fkLabelText="" orientation="33"/>
+ </play-pen>
+ <critic-manager>
+  <critic-grouping platformType="Generic" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PrimaryKeyCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.RelationshipMappingTypeCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.EmptyRelationshipCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.AlphaNumericSequenceNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetDefaultOnColumnWithNoDefaultCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SetNullOnNonNullableColumnCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DuplicateNameCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="DB2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.DB2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="H2" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.H2UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="HSQLDB" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.HSQLDBUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="MySQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLCommentCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.MySQLUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="Oracle" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OraclePhysicalNameCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleReservedWordsCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.OracleUnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="PostgreSQL" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.PostgreSQLReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerUnsupportedFeaturesCritic" severity="ERROR"/>
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServerReservedWordsCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2000" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2000UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+  <critic-grouping platformType="SQL Server 2005" enabled="true">
+   <critic-settings class="ca.sqlpower.architect.ddl.critic.impl.SQLServer2005UnsupportedFeaturesCritic" severity="ERROR"/>
+  </critic-grouping>
+ </critic-manager>
+ <profiles topNCount="10">
+  </profiles>
+  <olap>
+  </olap>
+  <olap-gui>
+  </olap-gui>
+</architect-project>
